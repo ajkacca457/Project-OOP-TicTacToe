@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-puts 'hi'
+gem 'rubocop', '~>0.81.0'
