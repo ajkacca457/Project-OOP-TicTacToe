@@ -109,8 +109,8 @@ while counter < 9
 end
 
 # we will break out of the loop:
-# if present_player_one/present_player_two gets a winning combination 
-# or board ran out of empty slots
+# if present_player_one/present_player_two gets a winning combination.
+# or board ran out of empty slots.
 
 if winner.nil?
   puts 'The game was a draw!'
