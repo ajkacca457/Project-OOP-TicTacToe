@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# rubocop:disable LineLength
+
 puts '"Hello world!"'
 
 # Setting up the game initially
@@ -123,5 +123,3 @@ else
   # response = gets.chomp
   # If the response is Yes or Y we start the game again (Game.start)
 end
-
-# rubocop:enable LineLength
