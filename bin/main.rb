@@ -76,3 +76,35 @@ puts "----------"
 puts "4 | 5 | 6"
 puts "----------"
 puts "7 | 8 | 9"
+
+# after the setup game will start a loop to get player inputs until:
+#there is a winning combination
+#All the cell of the board is taken
+
+while counter < 9
+  if counter.even?
+    # gamer_one will enter his/her move
+
+    # Getting the input of present_player_one
+
+    # we will validate the input by checking whether it is not nil or false or not anything except 1 to 9
+    # we will check the board whether the move match the board index and then put the move on the board.
+      puts 'For your move, Enter a number between 1 and 9.'
+      gamer_one_move = gets.chomp #(gamer_one or gamer_two depending upon the toss)
+      p "#{gamer_one} made the move #{gamer_one_move}"
+      counter+=1
+
+    #we will update the board based on the move made by present_player_one
+    #board.update_move(gamer_one_move.to_i - 1, gamer_one_sym#(X))
+
+  else
+  # present_player_two will make the move
+  # we will check the board whether the move match the board index and then put the move on the board.
+      puts 'For your move, Enter a number between 1 and 9.'
+      gamer_two_move = gets.chomp #(gamer_one or gamer_two depending upon the toss)
+      p "#{gamer_two} made the move #{gamer_two_move}"
+      counter+=1
+    #we will update the board based on the move made by present_player_two
+    #board.update_move(gamer_two_move.to_i - 1, gamer_two_sym#(O))
+  end
+end
