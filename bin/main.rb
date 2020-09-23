@@ -43,3 +43,36 @@ puts "#{gamer_one} will start first with character X and #{gamer_two} will go se
 
 
 3.downto(1){|counter| puts "wait #{counter} second preparing the game board"}
+
+# Will create the board from board class which will take an array as argument
+ board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#or board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+
+# In order to game to be work the game object will require a list of winning combinations. Game class will store the following winning combinations
+
+# winning_combinations = [
+#   [1, 2, 3],
+#   [4, 5, 6],
+#   [7, 8, 9],
+#   [1, 4, 7],
+#   [2, 5, 8],
+#   [3, 6, 9],
+#   [1, 5, 9],
+#   [3, 5, 7],
+# ]
+
+# after setting up the board then the game will set up:
+# initialize a variable
+winner=nil
+# winner variable will change to the player if a player gets winning combinations
+# initialize a variable
+counter = 0
+
+# board will be render for the players
+
+puts "1 | 2 | 3"
+puts "----------"
+puts "4 | 5 | 6"
+puts "----------"
+puts "7 | 8 | 9"
