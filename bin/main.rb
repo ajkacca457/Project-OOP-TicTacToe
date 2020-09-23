@@ -48,7 +48,9 @@ puts "#{gamer_one} will start first with character X and #{gamer_two} will go se
 # board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 # or board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-# In order to game to be work the game object will require a list of winning combinations. Game class will store the following winning combinations
+# In order to game to be work the game object will require a list of winning combinations.
+
+# Game class will store the following winning combinations
 
 # winning_combinations = [
 #   [1, 2, 3],
@@ -106,7 +108,9 @@ while counter < 9
   end
 end
 
-# we will break out of the loop if present_player_one/present_player_two gets a winning combination or board ran out of empty slots
+# we will break out of the loop:
+# if present_player_one/present_player_two gets a winning combination 
+# or board ran out of empty slots
 
 if winner.nil?
   puts 'The game was a draw!'
