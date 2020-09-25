@@ -4,7 +4,7 @@
 
 ## You can see a short demo of the game in the GIF below.
 
-![Alt Text](.github\tictactoe.gif)
+![image](images\tictactoe.gif)
 
 For this project, we wrote a Ruby executable script main.rb that allows the user to play the game of Tic, Tac, Toe in the Terminal.
 
