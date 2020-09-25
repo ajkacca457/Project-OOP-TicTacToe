@@ -33,7 +33,7 @@ In the event that all 9 squares are taken without either player getting three of
 
 ## Live Demo
 
-To quickly see our project in action, visit the [live demo](https://repl.it/@cristianCeamatu/microverse-ruby-tic-tac-toe#bin/main.rb) on repl.it.
+To quickly see our project in action, visit the [live demo]() on repl.it.
 
 There are no pre-requisites for enjoying the game through this method.
 
@@ -49,7 +49,7 @@ To get your own copy of our project simply clone the repository to your local ma
 
 **Step 1**: Using the Command Line, navigate into the location where you would like to have the repository. Then enter the following line of code:
 
-`git clone <git@github.com:cristianCeamatu/microverse-ruby-tic-tac-toe.git>`
+Clone the repository
 
 **Step 2**: Once the repo has been cloned, navigate inside it by entering the following command:
 
