@@ -14,9 +14,6 @@ class Tictactoe
     @helpers = Helpers.new
   end
 
-  # rubocop:disable Layout/LineLength
-  # rubocop:disable Metrics/AbcSize
-  # rubocop:disable Metrics/MethodLength
   def welcome
     puts 'Welcome to-'
     sleep 1
@@ -85,9 +82,6 @@ class Tictactoe
     sleep 1
   end
 
-  # rubocop:enable Metrics/MethodLength
-  # rubocop:enable Metrics/AbcSize
-  # rubocop:enable Layout/LineLength
   def execute
     welcome
     @board.display_board
