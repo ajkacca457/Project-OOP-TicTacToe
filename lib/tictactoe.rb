@@ -15,6 +15,8 @@ class Tictactoe
   end
 
   # rubocop:disable Layout/LineLength
+  # rubocop:disable Metrics/AbcSize
+  # rubocop:disable Metrics/MethodLength
   def welcome
     puts 'Welcome to-'
     sleep 1
@@ -28,8 +30,6 @@ class Tictactoe
     @board.board[index] = @player.sign
   end
 
-  # rubocop:disable Metrics/AbcSize
-  # rubocop:disable Metrics/MethodLength
   def turn
     @player = @player == @name[0] ? @name[1] : @name[0]
     puts "#{@player.name}, choose a spot between 1-9"
@@ -55,15 +55,10 @@ class Tictactoe
     end
   end
 
-  # rubocop:enable Metrics/AbcSize
-  # rubocop:enable Metrics/MethodLength
-
   def turn_count
     @board.board.select { |item| item == 'X' || item == 'O' }.size
   end
 
-  # rubocop:disable Metrics/MethodLength
-  # rubocop:disable Metrics/AbcSize
   def user_name
     signs = %w[X O]
     2.times do |item|
@@ -79,7 +74,6 @@ class Tictactoe
     sleep 1
   end
 
-  # rubocop:enable Metrics/MethodLength
   def greeting
     puts "today our players are: #{@name[0].name} and #{@name[1].name}"
     sleep 1
@@ -91,6 +85,7 @@ class Tictactoe
     sleep 1
   end
 
+  # rubocop:enable Metrics/MethodLength
   # rubocop:enable Metrics/AbcSize
   # rubocop:enable Layout/LineLength
   def execute
