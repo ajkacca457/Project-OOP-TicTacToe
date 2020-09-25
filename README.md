@@ -4,7 +4,7 @@
 
 ## You can see a short demo of the game in the GIF below.
 
-![image](.github\tictactoe.gif)
+![Alt Text](.github\tictactoe.gif)
 
 For this project, we wrote a Ruby executable script main.rb that allows the user to play the game of Tic, Tac, Toe in the Terminal.
 
@@ -14,9 +14,8 @@ For this project, we wrote a Ruby executable script main.rb that allows the user
 
 Each player is represented by a symbol, either 'X' or 'O'. The players then take turns to place their respective symbols in an empty square on the board, with X's going first - in our version of the game, these squares are represented by an empty board.
 
-The aim of the game is to have three of your symbols form a line, be it vertically, horizontally or diagonally, as illustrated in the image below.
-
-![A Winning Combination of Tic, Tac, Toe](.github/winning-screenshot.webp)
+The following example game is won by the first player, X:
+![example](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tic-tac-toe-game-1.svg/1280px-Tic-tac-toe-game-1.svg.png)
 
 In the event that all 9 squares are taken without either player getting three of their symbols in a line, a draw is declared.
 
@@ -73,7 +72,7 @@ The **./lib** folder contains subsidiary files that set up all of the classes an
 - **board.rb**, where the Board class is defined.
 - **game.rb**, where the Game class is defined.
 - **helpers.rb**, where the Board class is defined.
-- **payers.rb**, where the Helper class is defined.
+- **players.rb**, where the Helper class is defined.
 - **tictactoe.rb**, where the tictactoe class is defined.
   In addition to the above, the repo also contains .rubocop.yml for linting.
 
