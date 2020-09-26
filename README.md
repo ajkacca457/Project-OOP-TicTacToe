@@ -93,14 +93,14 @@ The **./lib** folder contains subsidiary files that set up all of the classes an
 👤 **Avijit Karmaker**
 
 - Github: [@AvijitKarmaker](https://github.com/ajkacca457)
-- Twitter: [@AvijitKarmaker](https://twitter.com/Rickcoyl)
+- Twitter: [@AvijitKarmaker](https://twitter.com/ajkacca)
 - Linkedin: [AvijitKarmaker](https://www.linkedin.com/in/avijit-karmaker-8738a54a/)
 
 👤 **Rick Oburu**
 
 - Github: [@RickOburu](https://github.com/RICKCOYL)
-- Twitter: [@RickOburu]
-- Linkedin: [Rick Oburu]
+- Twitter: [@RickOburu](https://twitter.com/Rickcoyl)
+- Linkedin: [Rick Oburu](https://ug.linkedin.com/in/rick-oburu-8627591a4)
 
 ## 🤝 Contributing
 
