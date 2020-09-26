@@ -1,4 +1,3 @@
-# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
 require_relative '../lib/player'
 require_relative '../lib/game'
 require_relative '../lib/board'
@@ -75,14 +74,14 @@ class Tictactoe
   def greeting
     puts "today our players are: #{@name[0].name} and #{@name[1].name}"
     sleep 1
-    puts "#{@name[0].name} is going to play with 'X' symbol and #{@name[1].name} is going to play with 'O'symbol"
+    puts "#{@name[0].name} is going to play with 'X' symbol."
+    puts "#{@name[1].name} is going to play with 'O'symbol"
     sleep 1
     puts 'your game starts at:'
     sleep 1
     3.downto(0) { |number| puts number }
     sleep 1
   end
-  # rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
 
   def execute
     welcome
