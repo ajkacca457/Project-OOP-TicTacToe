@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 # this is a class for setting basic game logic
 class Game
