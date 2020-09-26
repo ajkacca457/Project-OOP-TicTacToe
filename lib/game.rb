@@ -1,5 +1,3 @@
-
-
 # this is a class for setting basic game logic
 class Game
   WINNING_COMBO = [
