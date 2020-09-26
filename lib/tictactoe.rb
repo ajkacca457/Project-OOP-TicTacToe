@@ -40,8 +40,8 @@ class Tictactoe
       player_move = gets.strip.to_i
     end
     move_board(@helpers.input_to_index(player_move))
+    puts `clear`
     @board.display_board
-
     if @game.won?(@board.board)
       puts "Congratulations #{@player.name} you won!!!"
       @game_over = true
