@@ -65,7 +65,7 @@ helpers = Helpers.new
 9.times do
   puts 'enter any number from 1 to 9'
   player1_move = gets.chomp
-  if helpers.position_taken?(board.board, helpers.input_to_index(player1_move))
+  if !helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
     puts 'position not available. Enter another number'
   else
     board.board[helpers.input_to_index(player1_move)] = player1_move
