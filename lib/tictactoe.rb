@@ -40,7 +40,6 @@ class Tictactoe
       player_move = gets.strip.to_i
     end
     move_board(@helpers.input_to_index(player_move))
-    puts `clear`
     @board.display_board
     if @game.won?(@board.board)
       puts "Congratulations #{@player.name} you won!!!"
@@ -52,7 +51,15 @@ class Tictactoe
   end
 
   def turn_count
-    @board.board.select { |item| item == 'X' || item == 'O' }.size
+    counter = 0
+    if @board.board.include?('X')
+      counter += 1
+    elsif @board.board.include?('O')
+      counter += 1
+    else
+      counter
+    end
+    counter
   end
 
   def user_name
