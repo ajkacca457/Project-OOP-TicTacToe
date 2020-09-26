@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
+<<<<<<< HEAD
 require_relative '../lib/board'
 require_relative '../lib/helpers'
+=======
+# frozen_string_literal: true
+>>>>>>> c313e8f241ea8ddd9dcff05cf00b224018e5af05
 
 puts '"Hello world!"'
 
