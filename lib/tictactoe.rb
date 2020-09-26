@@ -1,3 +1,4 @@
+# rubocop: disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
 require_relative '../lib/player'
 require_relative '../lib/game'
 require_relative '../lib/board'
@@ -81,6 +82,7 @@ class Tictactoe
     3.downto(0) { |number| puts number }
     sleep 1
   end
+  # rubocop: enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
 
   def execute
     welcome
