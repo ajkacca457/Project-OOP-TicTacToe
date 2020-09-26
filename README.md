@@ -99,8 +99,8 @@ The **./lib** folder contains subsidiary files that set up all of the classes an
 👤 **Rick Oburu**
 
 - Github: [@RickOburu](https://github.com/RICKCOYL)
-- Twitter: [@RickOburu](https://twitter.com/AmitaRoy14)
-- Linkedin: [Rick Oburu](https://www.linkedin.com/in/amita-roy-3b823b68/)
+- Twitter: [@RickOburu]
+- Linkedin: [Rick Oburu]
 
 ## 🤝 Contributing
 
