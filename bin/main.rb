@@ -40,16 +40,16 @@ puts "#{gamer_two} will go second with character O"
 
 3.downto(1) { |counter| puts "wait #{counter} second preparing the game board" }
 
-# winning_combinations = [
-#   [1, 2, 3],
-#   [4, 5, 6],
-#   [7, 8, 9],
-#   [1, 4, 7],
-#   [2, 5, 8],
-#   [3, 6, 9],
-#   [1, 5, 9],
-#   [3, 5, 7],
-# ]
+winning_combinations = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9],
+  [1, 5, 9],
+  [3, 5, 7]
+]
 
 # after setting up the board then the game will set up:
 
@@ -58,23 +58,33 @@ winner = nil
 # board will be render for the players
 board = Board.new
 board.display_board
-
 helpers = Helpers.new
-
+game_over = false
+turn = 0
 # after the setup game will start a loop to get player inputs until:
-9.times do
+
+until game_over
   puts 'enter any number from 1 to 9'
   player1_move = gets.chomp
-  if !helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
-    puts 'position not available. Enter another number'
-  else
-    board.board[helpers.input_to_index(player1_move)] = player1_move
-    board.display_board
+  until helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
+    puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
+    player1_move = gets.chomp
+    if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
+      break
+    end
   end
-end
+  board.board[helpers.input_to_index(player1_move)] = player1_move
+  board.display_board
+  turn += 1
 
-if winner.nil?
-  puts 'the game is a draw'
-else
-  puts 'congratualtions player one/two win'
+  if board.board.include?(winning_combinations)
+    puts 'congratulations player one won'
+    game_over = true
+    break
+  elsif turn >= 9 && !winner
+    puts 'the game is a draw'
+    game_over = true
+    break
+  end
+
 end
