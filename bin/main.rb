@@ -5,7 +5,7 @@ require_relative '../lib/helpers'
 puts '"Hello world!"'
 
 puts 'Welcome!! Are you ready to play tic-tac-toe?'
-player_answer = gets.chomp.upcase
+player_answer = gets.chomp.downcase
 
 if player_answer == 'yes'
   puts 'welcome to the game'
