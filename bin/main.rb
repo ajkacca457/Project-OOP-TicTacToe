@@ -69,9 +69,7 @@ until game_over
   until helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
     puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
     player1_move = gets.chomp
-    if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
-      break
-    end
+    break if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
   end
   board.board[helpers.input_to_index(player1_move)] = player1_move
   board.display_board
