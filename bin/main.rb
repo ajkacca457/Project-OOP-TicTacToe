@@ -58,11 +58,10 @@ board = Board.new
 board.display_board
 helpers = Helpers.new
 game_over = false
-
+turn = 0
 # after the setup game will start a loop to get player inputs until:
 
 until game_over
-  turn = 0
   if turn.even?
     puts 'Player 1-enter any number from 1 to 9'
     player1_move = gets.chomp
@@ -72,11 +71,8 @@ until game_over
       break if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
     end
     board.board[helpers.input_to_index(player1_move)] = player1_move
-    board.display_board
-    turn += 1
 
-  elsif turn.odd?
-
+  else
     puts 'Player 2-enter any number from 1 to 9'
     player2_move = gets.chomp
     until helpers.valid_move?(board.board, helpers.input_to_index(player2_move))
@@ -85,9 +81,10 @@ until game_over
       break if helpers.valid_move?(board.board, helpers.input_to_index(player2_move))
     end
     board.board[helpers.input_to_index(player2_move)] = player2_move
-    board.display_board
-    turn += 1
-end
+
+  end
+  board.display_board
+  turn += 1
 
   if board.board.include?(winning_combinations)
     puts 'congratulations player one won'
