@@ -41,11 +41,11 @@ class Tictactoe
     @player = @player == @name[0] ? @name[1] : @name[0]
     puts "#{@player.name}, choose a spot between 1-9"
     player_move = gets.strip.to_i
-    unless player_move.positive?
+    until player_move.positive?
       puts 'Please enter a valid move'
       player_move = gets.strip.to_i
     end
-    unless @helpers.valid_move?(@myboard, @helpers.input_to_index(player_move))
+    until @helpers.valid_move?(@myboard, @helpers.input_to_index(player_move))
       puts "#{@player.name}, Place is already taken.Choose another number between 1-9"
       player_move = gets.strip.to_i
     end
@@ -121,7 +121,7 @@ new_game.execute
 puts 'want to play again?'
 answer = gets.strip.downcase
 
-if answer == 'yes'
+if answer == 'yes'||answer =='y'
   game = Tictactoe.new
   game.execute
 else
