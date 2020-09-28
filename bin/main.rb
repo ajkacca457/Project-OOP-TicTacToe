@@ -1,18 +1,26 @@
 #!/usr/bin/env ruby
 require_relative '../lib/player'
 require_relative '../lib/game'
-require_relative '../lib/board'
 require_relative '../lib/helpers'
 # this is a class for excuting the game
 class Tictactoe
   attr_accessor :name, :board
 
   def initialize
-    @board = Board.new
+    @myboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     @game = Game.new
     @name = []
     @game_over = false
     @helpers = Helpers.new
+  end
+
+  def display_board
+    puts " #{@myboard[0]} | #{@myboard[1]} | #{@myboard[2]} "
+    puts '-----------'
+    puts " #{@myboard[3]} | #{@myboard[4]} | #{@myboard[5]} "
+    puts '-----------'
+    puts " #{@myboard[6]} | #{@myboard[7]} | #{@myboard[8]} "
+    puts ' '
   end
 
   def welcome
@@ -26,7 +34,7 @@ class Tictactoe
   end
 
   def move_board(index)
-    @board.board[index] = @player.sign
+    @myboard[index] = @player.sign
   end
 
   def turn
@@ -37,13 +45,13 @@ class Tictactoe
       puts 'Please enter a valid move'
       player_move = gets.strip.to_i
     end
-    unless @helpers.valid_move?(@board.board, @helpers.input_to_index(player_move))
+    unless @helpers.valid_move?(@myboard, @helpers.input_to_index(player_move))
       puts "#{@player.name}, Place is already taken.Choose another number between 1-9"
       player_move = gets.strip.to_i
     end
     move_board(@helpers.input_to_index(player_move))
-    @board.display_board
-    if @game.won?(@board.board)
+    display_board
+    if @game.won?(@myboard)
       puts "Congratulations #{@player.name} you won!!!"
       @game_over = true
     elsif @game.draw?(turn_count)
@@ -54,9 +62,9 @@ class Tictactoe
 
   def turn_count
     counter = 0
-    if @board.board.include?('X')
+    if @myboard.include?('X')
       counter += 1
-    elsif @board.board.include?('O')
+    elsif @myboard.include?('O')
       counter += 1
     else
       counter
@@ -99,7 +107,7 @@ class Tictactoe
 
   def execute
     welcome
-    @board.display_board
+    display_board
     user_name
     greeting
     turn until @game_over

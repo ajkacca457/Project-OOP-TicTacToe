@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # this is a class for setting players
 class Player
   attr_reader :name, :sign
