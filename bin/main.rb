@@ -65,20 +65,24 @@ until game_over
   if turn.even?
     puts 'Player 1-enter any number from 1 to 9'
     player1_move = gets.chomp
-    until helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
+    player1_input=helpers.input_to_index(player1_move)
+    until helpers.valid_move?(board.board,player1_input )
       puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
       player1_move = gets.chomp
-      break if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
+      player1_input=helpers.input_to_index(player1_move)
+      break if helpers.valid_move?(board.board, player1_input)
     end
     board.board[helpers.input_to_index(player1_move)] = player1_move
 
   else
     puts 'Player 2-enter any number from 1 to 9'
     player2_move = gets.chomp
-    until helpers.valid_move?(board.board, helpers.input_to_index(player2_move))
+    player2_input=helpers.input_to_index(player2_move)
+    until helpers.valid_move?(board.board, player2_input)
       puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
       player2_move = gets.chomp
-      break if helpers.valid_move?(board.board, helpers.input_to_index(player2_move))
+      player2_input=helpers.input_to_index(player2_move)
+      break if helpers.valid_move?(board.board, player2_input)
     end
     board.board[helpers.input_to_index(player2_move)] = player2_move
 
