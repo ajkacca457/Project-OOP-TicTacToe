@@ -4,7 +4,7 @@ require_relative '../lib/game'
 require_relative '../lib/helpers'
 # this is a class for excuting the game
 class Tictactoe
-  attr_accessor :name, :board
+  attr_writers :name, :board
 
   def initialize
     @myboard = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
