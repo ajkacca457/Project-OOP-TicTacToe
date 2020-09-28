@@ -2,8 +2,6 @@
 require_relative '../lib/board'
 require_relative '../lib/helpers'
 
-puts '"Hello world!"'
-
 puts 'Welcome!! Are you ready to play tic-tac-toe?'
 player_answer = gets.chomp.downcase
 
@@ -60,20 +58,36 @@ board = Board.new
 board.display_board
 helpers = Helpers.new
 game_over = false
-turn = 0
+
 # after the setup game will start a loop to get player inputs until:
 
 until game_over
-  puts 'enter any number from 1 to 9'
-  player1_move = gets.chomp
-  until helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
-    puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
+  turn = 0
+  if turn.even?
+    puts 'Player 1-enter any number from 1 to 9'
     player1_move = gets.chomp
-    break if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
-  end
-  board.board[helpers.input_to_index(player1_move)] = player1_move
-  board.display_board
-  turn += 1
+    until helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
+      puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
+      player1_move = gets.chomp
+      break if helpers.valid_move?(board.board, helpers.input_to_index(player1_move))
+    end
+    board.board[helpers.input_to_index(player1_move)] = player1_move
+    board.display_board
+    turn += 1
+
+  elsif turn.odd?
+
+    puts 'Player 2-enter any number from 1 to 9'
+    player2_move = gets.chomp
+    until helpers.valid_move?(board.board, helpers.input_to_index(player2_move))
+      puts 'Move is not valid. Enter number between 1 to 9 which is not taken'
+      player2_move = gets.chomp
+      break if helpers.valid_move?(board.board, helpers.input_to_index(player2_move))
+    end
+    board.board[helpers.input_to_index(player2_move)] = player2_move
+    board.display_board
+    turn += 1
+end
 
   if board.board.include?(winning_combinations)
     puts 'congratulations player one won'
