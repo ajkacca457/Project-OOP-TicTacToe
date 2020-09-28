@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # this is a class for setting basic game logic
 class Game
   WINNING_COMBO = [
@@ -11,7 +9,7 @@ class Game
     [2, 5, 8],
     [6, 4, 2],
     [0, 4, 8]
-  ]
+  ].freeze
 
   def won?(board)
     WINNING_COMBO.find do |item|
