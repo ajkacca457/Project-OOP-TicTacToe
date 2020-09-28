@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # this is a class that contains all the helpers methods
 class Helpers
   def valid_move?(board, index)
