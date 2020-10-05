@@ -12,4 +12,10 @@ describe Helpers do
             expect(subject.position_taken?(9,9)).to be_truthy
         end
     end
+
+    describe "#input_to_index" do
+        it "Checks if user input is equal to board index" do
+            expect(subject.input_to_index(2)).to eq(1)
+        end
+    end
 end
