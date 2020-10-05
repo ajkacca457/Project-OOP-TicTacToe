@@ -1,21 +1,23 @@
-#require './lib/game.rb'
+# frozen_string_literal: true
 
-#describe Game do
-#    describe "#won?" do
-#        it "Check if there is a winner" do
-#            expect(subject.won?("X")).not_to eq('TIE')
-#        end
-#    end
+require './lib/game.rb'
 
-#    describe "#draw?" do
-#      it "Check if there is a draw" do
-#        expect(subject.draw?(9)).to be_truthy
-#      end
-#    end
+describe Game do
+  describe '#won?' do
+    it 'Check if there is a winner' do
+      expect(subject.won?('X')).not_to eq('TIE')
+    end
+  end
 
-#    describe "#over?" do
-#        it "Checks if the game is over" do
-#            expect(subject.over?(9,9)).to be_truthy
-#        end
-#    end
-#end
+  describe '#draw?' do
+    it 'Check if there is a draw' do
+      expect(subject.draw?(9)).to be_truthy
+    end
+  end
+
+  describe '#over?' do
+    it 'Checks if the game is over' do
+      expect(subject.over?(9, 9)).to be_truthy
+    end
+  end
+end
