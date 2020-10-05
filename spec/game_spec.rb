@@ -9,13 +9,12 @@ describe Game do
     end
   end
 
-    describe "#draw?" do
-      it "Check if there is a draw" do
-        expect(subject.draw?(9)).to be_truthy
-      end
-      it "Check if there is not a draw" do
-        expect(subject.draw?(5)).to be_falsey
-      end
+  describe '#draw?' do
+    it 'Check if there is a draw' do
+      expect(subject.draw?(9)).to be_truthy
+    end
+    it 'Check if there is not a draw' do
+      expect(subject.draw?(5)).to be_falsey
     end
   end
 
