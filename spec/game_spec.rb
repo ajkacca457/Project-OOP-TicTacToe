@@ -24,7 +24,7 @@ describe Game do
   end
 
   describe '#over?' do
-    board_over = ['X', 'X', 'O', 'O', 'O', 'X', 'X', 'O', 'X']
+    board_over = %w[X X O O O X X O X]
 
     it 'Checks if the game is over' do
       expect(subject.over?(board_over, 9)).to be_truthy
