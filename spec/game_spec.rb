@@ -4,8 +4,13 @@ require './lib/game.rb'
 
 describe Game do
   describe '#won?' do
+    board_win = ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' ']
+    board_continue = ['X', 'O', 'X', ' ', ' ', ' ', ' ', ' ', ' ']
     it 'Check if there is a winner' do
-      expect(subject.won?('X')).not_to eq('TIE')
+      expect(subject.won?(board_win)).to be_truthy
+    end
+    it 'Check if there is not a winner' do
+      expect(subject.won?(board_continue)).to be_falsey
     end
   end
 
@@ -19,8 +24,13 @@ describe Game do
   end
 
   describe '#over?' do
+    board_over = ['X', 'X', 'O', 'O', 'O', 'X', 'X', 'O', 'X']
+
     it 'Checks if the game is over' do
-      expect(subject.over?(9, 9)).to be_truthy
+      expect(subject.over?(board_over, 9)).to be_truthy
+    end
+    it 'Checks if the game is not over' do
+      expect(subject.over?(board_over, 5)).to be_falsey
     end
   end
 end
