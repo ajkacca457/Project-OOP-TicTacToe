@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './lib/helpers.rb'
 
 describe Helpers do
@@ -9,16 +11,17 @@ describe Helpers do
             expect(subject.valid_move?("X", 5)).to be_truthy
         end
     end
+  end
 
-    describe "#position_taken?" do
-        it "Checks if position is taken" do
-            expect(subject.position_taken?(9,9)).to be_truthy
-        end
+  describe '#position_taken?' do
+    it 'Checks if position is taken' do
+      expect(subject.position_taken?(9, 9)).to be_truthy
     end
+  end
 
-    describe "#input_to_index" do
-        it "Checks if user input is equal to board index" do
-            expect(subject.input_to_index(2)).to eq(1)
-        end
+  describe '#input_to_index' do
+    it 'Checks if user input is equal to board index' do
+      expect(subject.input_to_index(2)).to eq(1)
     end
+  end
 end
